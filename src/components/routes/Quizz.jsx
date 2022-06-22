@@ -9,7 +9,7 @@ const API_URL =
 
 function Quizz() {
   const [questions, setQuestions] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(2);
   const [score, setScore] = useState(0);
   const [showAnswers, setShowAnswers] = useState(false);
 
@@ -30,7 +30,7 @@ function Quizz() {
 
   const handleAnswer = (answer) => {
     if (!showAnswers) {
-      if (answer === questions[currentIndex].correct_answer) {
+      if (answer !== questions[currentIndex].correct_answer) {
         setScore(score + 1);
       }
     }
@@ -43,7 +43,7 @@ function Quizz() {
     setShowAnswers(false);
   };
 
-  return questions.length > 0 ? (
+  return questions.length < 0 ? (
     <div id="quizzContainer">
       <div className="container">
         {currentIndex >= questions.length ? (

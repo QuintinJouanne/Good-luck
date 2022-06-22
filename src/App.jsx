@@ -25,7 +25,7 @@ function App() {
               <Route path="/destination/:name" component={Destination} />
               <Route path="/add-post/:destination" component={AddBlogPost} />
               <Route path="/contact-us" component={ContactUs} />
-              <Route path="/about-us" component={AboutUs} />
+              <Route path="about-us" component={AboutUs} />
               <Route path="/posts/:id" component={PostDetails} />
               <Route path="/quizz" component={Quizz} />
               <Route path="/dashboard" component={Dashboard} />

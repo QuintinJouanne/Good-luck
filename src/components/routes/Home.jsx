@@ -6,8 +6,8 @@ import MvdList from '../MvdList';
 import '../../css/Home.css';
 
 const Home = () => {
-  const [search, setSearch] = React.useState('');
-  const [countryList, setCountryList] = React.useState([]);
+  const [search, setSearch] = React.useState([]);
+  const [countryList, setCountryList] = React.useState('');
   const [displaySearchFilter, setDisplaySearchFilter] = React.useState(false);
 
   const handleChange = (e) => {
@@ -64,7 +64,6 @@ const Home = () => {
           .map((elem) => (
             <Link
               to={`/destination/${elem.name.toLowerCase()}`}
-              key={elem.name}
             >
               <div className="flex items-center space-x-4 filter-container">
                 <div>

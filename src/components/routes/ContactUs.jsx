@@ -3,7 +3,7 @@ import emailjs from 'emailjs-com';
 import { useToasts } from 'react-toast-notifications';
 import '../../css/ContactUs.css';
 
-const ContactUs = () => {
+const contactUs = () => {
   const [processing, setProcessing] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -113,4 +113,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default contactUs;

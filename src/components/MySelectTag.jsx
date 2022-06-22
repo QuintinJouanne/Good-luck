@@ -24,7 +24,7 @@ const MySelectTag = ({ setSelectedTags }) => {
         name="tags"
         options={tags}
         onChange={(e) =>
-          setSelectedTags(e.map((tag) => tag.value.slice(1, tag.length)))
+          setSelectedTags(e.map((tag) => tag.value.slice(3, 2)))
         }
         className="basic-multi-select"
         classNamePrefix="select"
